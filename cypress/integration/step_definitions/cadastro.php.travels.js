@@ -16,7 +16,7 @@ When(`preencher todos os campos de cadastro`, () => {
     Travels.preencher_todos_os_campos('geting',
         'felix',
         '11 985674965',
-        'antonellaalanadamota-83@met.org',
+        'antonellaalanadamota-83@m.org',
         'E3EEAPEEO6',
         'E3EEAPEEO6')
 });
