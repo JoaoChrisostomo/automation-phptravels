@@ -11,6 +11,6 @@ Cypress.Server.defaults({
   });
   
   Cypress.SelectorPlayground.defaults({
-    selectorPriority: ['data-wc','data-cy','data-test','data-testid','id', 'class', 'attributes', 'tag','nth-child'],
+    selectorPriority: ['data-module','type','style','data-wc','data-cy','data-test','data-testid','id', 'class', 'attributes', 'tag','nth-child'],
   
   });
