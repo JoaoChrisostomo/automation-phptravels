@@ -1,3 +1,4 @@
+import { Factory } from '../fixtures/factory'
 import Base from './base.page'
 import { ELEMENTS as EL } from './components/Elementos'
 
@@ -17,13 +18,14 @@ export class Travels extends Base {
 
 
     }
-    static preencher_os_campos_como_convidado(nome, sobrenome, email, confirmaemail, numerocontato, endereco) {
-        cy.get(EL.CAMPO_PRIMEIRO_NOME).type(nome)
-        cy.get(EL.CAMPO_SEGUNDO_NOME).type(sobrenome)
-        cy.get(EL.CAMPO_EMAIL).type(email)
-        cy.get(EL.CONFIRMA_EMAIL).type(confirmaemail)
-        cy.get(EL.NUMERO_CONTATO).type(numerocontato)
-        cy.get(EL.ENDERECO).type(endereco)
+    static preencher_os_campos_como_convidado(type) {
+        let dados_cadastro = Factory.cadastro(type)
+        cy.get(EL.CAMPO_PRIMEIRO_NOME, dados_cadastro.firstname)
+        cy.get(EL.CAMPO_SEGUNDO_NOME, dados_cadastro.lastname)
+        cy.get(EL.CAMPO_EMAIL, dados_cadastro.email)
+        cy.get(EL.CONFIRMA_EMAIL, dados_cadastro.email)
+        cy.get(EL.NUMERO_CONTATO, dados_cadastro.phoneNumber)
+        cy.get(EL.ENDERECO, dados)
 
     }
     static clicar_em_confirma_reserva() {

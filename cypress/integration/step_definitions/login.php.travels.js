@@ -8,11 +8,11 @@ Given(`dado que esteja na página home`, () => {
     Travels.acessar_pagina_home()
 });
 
-And(`clico no botão de login`, () => {
+When(`clico no botão de login`, () => {
     Travels.clicar_botao_de_login()
 });
 
-When(`preencho email e senha`, () => {
+And(`preencho email e senha`, () => {
     Travels.login_com_dados_validos('antonellaalanadamota-83@me.org', 'E3EEAPEEO6')
 
 });
@@ -26,12 +26,12 @@ Given(`dado que esteja na página home`, () => {
     Travels.acessar_pagina_home()
 });
 
-And(`clico no botão de login`, () => {
+When(`clico no botão de login`, () => {
     Travels.clicar_botao_de_login()
 
 });
 
-When(`preencho usuário invalido`, () => {
+And(`preencho usuário invalido`, () => {
     Travels.login_com_email_invalido('antonellaalana-83@met.org', 'E3EEAPEEO6')
     
 });
@@ -45,12 +45,12 @@ Given(`dado que esteja na página home`, () => {
     Travels.acessar_pagina_home()
 });
 
-And(`clico no botão de login`, () => {
+When(`clico no botão de login`, () => {
     Travels.clicar_botao_de_login()
 
 });
 
-When(`preencho o campo de usuário menos a senha`, () => {
+And(`preencho o campo de usuário menos a senha`, () => {
     Travels.login_com_senha_invalida('antonellaalanadamota-83@met.org', 'kodsip')
 
 });

@@ -10,7 +10,7 @@ export const ELEMENTS = {
     SENHA               : ':nth-child(6) > .pure-material-textfield-outlined > span',
     CONFIRMA_SENHA      : ':nth-child(7) > .pure-material-textfield-outlined > span',
     CONFIRMA_CADASTRO   : '#headersignupform > div:nth-child(8) > button',
-    CADASTRO_COM_SUCESSO: '.text-align-left',
+    CADASTRO_COM_SUCESSO: '.d-none > .dropdown > #dropdownCurrency',
     CADASTRO_EXISTENTE  : '.alert',
 
  // ELEMENTOS - Login

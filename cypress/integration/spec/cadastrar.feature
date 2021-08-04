@@ -1,21 +1,22 @@
 Feature: cadastrar usuário
 
-    Scenario: Realizar cadastro com sucesso
+    Background: Acesso a página home
         Given dado que esteja na página home
-        And clico na aba minha conta
+
+    Scenario: Realizar cadastro com sucesso
+        And seleciono a aba minha conta
         When preencher todos os campos de cadastro
-        Then será exibido uma mensagem de boas vindas
+        Then devera ser exibido o nome do usuário no campo de login de login
 
     Scenario: Realizar cadastro com dados repetidos
-        Given dado que esteja na página home
-        And clico na aba minha conta
+        And seleciono a aba minha conta
         When preencher todos os campos de cadastro
         Then será exibido uma mensagem de usuário existente
 
-    Scenario: Realizar cadastro faltando preencher um dado obrigatório
-        Given dado que esteja na página home
-        And clico na aba minha conta
-        When preencher todos os campos de cadastro menos email
-        Then continuarei logado na pagina de cadastro
 
+
+    Scenario: Realizar cadastro faltando preencher um campo obrigatório
+        And seleciono a aba minha conta
+        When preencher todos os campos de cadastro menos email
+        Then a mensagem de erro deverá ser exibida
 
