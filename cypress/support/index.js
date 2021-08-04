@@ -10,7 +10,12 @@ Cypress.Server.defaults({
     return false;
   });
   
+  import 'cypress-xpath';
+
   Cypress.SelectorPlayground.defaults({
-    selectorPriority: ['data-module','type','style','data-wc','data-cy','data-test','data-testid','id', 'class', 'attributes', 'tag','nth-child'],
+    selectorPriority: ['data-module','data-wc','data-cy','data-test','data-testid','id', 'class', 'attributes', 'tag','nth-child'],
   
   });
+
+  
+

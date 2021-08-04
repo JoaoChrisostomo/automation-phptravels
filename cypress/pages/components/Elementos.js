@@ -26,7 +26,7 @@ export const ELEMENTS = {
  
     CLICAR_PRIMEIRA_IMAGEM : ':nth-child(6) > .container-fluid > .row > :nth-child(1) > .featured-image-grid-item > .position-absolute-href',
     BTN_ALTERAR_DATA       : '.the-hotel-item > .row > :nth-child(2) > .btn',
-    BTN_AGENDAR_AGORA      : '[action="https://www.phptravels.net/tours/book/Spectaculars-Of-The-Nile-3-Nights?date=03/08/2021&adults=1"] > .btn',
+    BTN_AGENDAR_AGORA      : '[action="https://www.phptravels.net/tours/book/6-Days-Around-Thailand?date=03/08/2021&adults=1"] > .btn',
     CAMPO_PRIMEIRO_NOME    : '.form-group > .pure-material-textfield-outlined > span',
     CAMPO_SEGUNDO_NOME     : '.gap-20 > .col-md-6 > .pure-material-textfield-outlined > span',
     CAMPO_EMAIL            : '.o2 > .pure-material-textfield-outlined > span',
@@ -35,6 +35,9 @@ export const ELEMENTS = {
     ENDERECO               : ':nth-child(4) > .col-md-12 > .pure-material-textfield-outlined > span',
     BTN_CONFIRMA_RESERVA   : ':nth-child(25) > .btn',
     BTN_PAGAR_NA_CHEGADA   : '[data-module=tours]',
-    VALIDANDO_A_RESERVA    : '.content > h4'
-
+    VALIDANDO_A_RESERVA    : '.content > h4',
+    CLICAR_SEGUNDA_IMAGEM  : ':nth-child(6) > .container-fluid > .row > :nth-child(2) > .featured-image-grid-item > .position-absolute-href',
+    CLICAR_BTN_ENTRAR      : '#signintab',
+    EMAIL_NAO_INSERIDO     : '[class="result"]'
 }
+    

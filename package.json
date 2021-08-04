@@ -25,5 +25,8 @@
       "generate": false,
       "outputFolder": "cypress/report/cucumber-json"
     }
+  },
+  "dependencies": {
+    "cypress-xpath": "^1.4.0"
   }
 }

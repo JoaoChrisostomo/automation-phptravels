@@ -3,7 +3,7 @@ import { Given, When, And, Then, Before } from 'cypress-cucumber-preprocessor/st
 import { Travels } from '../../pages/Login.php.travels'
 
 
-
+// PRIMEIRO CENÁRIO POSITIVO - Realizar login com dados validos
 Given(`dado que esteja na página home`, () => {
     Travels.acessar_pagina_home()
 });
@@ -21,6 +21,7 @@ Then(`sera validado usuário logado com sucesso`, () => {
 
 });
 
+// SEGUNDO CENÁRIO NEGATIVO - Realizar login com usuário invalido
 Given(`dado que esteja na página home`, () => {
     Travels.acessar_pagina_home()
 });
@@ -39,6 +40,7 @@ Then(`sera exibido uma mensagem de usuário invalido`, () => {
 
 });
 
+// TERCEIRO CENÁRIO NEGATIVO - Realizar login com senha invalida
 Given(`dado que esteja na página home`, () => {
     Travels.acessar_pagina_home()
 });

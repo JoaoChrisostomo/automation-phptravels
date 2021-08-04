@@ -6,5 +6,7 @@
     "chromeWebSecurity": false,
     "numTestKeptInMemory": 5,
     "ignoreTestFiles": "*.js",
-    "testFiles": "**/*.{feature,features}"
+    "testFiles": "**/*.{feature,features}",
+    "modifyObstructiveCode": false,
+    "experimentalSourceRewriting": true
 }

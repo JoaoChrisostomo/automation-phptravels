@@ -29,3 +29,10 @@ Cypress.Commands.add('stepNotImplemented', () => {
     cy.log("O step não foi implementado!")
 })
 
+Cypress.Commands.add('clickAlert', (locator, message) => {
+    cy.get('#alert').click()
+    cy.on('window:alert', msg => {
+        expect(msg).to.be.equal('Alert Simples')
+
+    })
+})
