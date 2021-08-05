@@ -11,7 +11,7 @@ Given(`dado que esteja na página home`, () => {
 And(`seleciono a aba minha conta`, () => {
     Travels.clicar_em_minha_conta()
 });
-// Para o teste passar é necessario trocar o e-mail
+
 When(`preencher todos os campos de cadastro`, () => {
     Travels.preencher_todos_os_campos()
 });
@@ -33,8 +33,8 @@ And(`seleciono a aba minha conta`, () => {
     Travels.clicar_em_minha_conta()
 });
 
-When(`preencher todos os campos de cadastro`, () => {
-    Travels.preencher_todos_os_campos()
+When(`preencher a pagina de cadastro com dados repetidos`, () => {
+    Travels.preencher_cadastro_com_dados_repetidos()
 
 });
 

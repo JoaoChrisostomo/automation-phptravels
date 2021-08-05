@@ -1,16 +1,16 @@
 Feature: login
 
-    Scenario: Realizar login com dados validos
-        Given dado que esteja na página home
-         When acessar a pagina de login
-         And inserir os dados válidos
-        Then deverá ser exibido usuário logado com sucesso
+    # Scenario: Realizar login com dados validos
+    #    Given dado que esteja na página home
+    #    When acessar a pagina de login
+    #   And inserir os dados válidos
+    # Then deverá ser exibido usuário logado com sucesso
 
-    Scenario: Realizar login com usuário invalido
-        Given dado que esteja na página home
-        When acessar a pagina de login
-        And inserir dados invalido
-        Then deverá ser exibido uma mensagem usuário invalido
+    # Scenario: Realizar login com usuário invalido
+    #    Given dado que esteja na página home
+    #   When acessar a pagina de login
+    #  And inserir dados invalido
+    # Then deverá ser exibido uma mensagem usuário e senha invalida
 
     Scenario: Realizar login com senha invalida
         Given dado que esteja na página home

@@ -1,57 +1,65 @@
 /// <reference types="cypress" />
 import { Given, When, And, Then, Before } from 'cypress-cucumber-preprocessor/steps'
-import { Travels } from '../../pages/Login.php.travels'
+import { PHP } from '../../pages/Login.php.travels'
 
 
 // PRIMEIRO CENÁRIO POSITIVO - Realizar login com dados validos
 Given(`dado que esteja na página home`, () => {
-    Travels.acessar_pagina_home()
+    PHP.acessar_pagina_home()
 });
 
-When(`clico no botão de login`, () => {
-    Travels.clicar_botao_de_login()
+
+When(`acessar a pagina de login`, () => {
+	
+    PHP.clicar_botao_de_login()
 });
 
-And(`preencho email e senha`, () => {
-    Travels.login_com_dados_validos('antonellaalanadamota-83@me.org', 'E3EEAPEEO6')
+
+And(`inserir os dados válidos`, () => {
+   PHP.login_com_dados_validos('antonellaalanadamota-83@met.org', 'E3EEAPEEO6')
 
 });
 
-Then(`sera validado usuário logado com sucesso`, () => {
 
+Then(`deverá ser exibido usuário logado com sucesso`, () => {
+	PHP.entao_sera_exibido_nome_do_usuário_logado()
 });
+
 
 // SEGUNDO CENÁRIO NEGATIVO - Realizar login com usuário invalido
 Given(`dado que esteja na página home`, () => {
-    Travels.acessar_pagina_home()
+    PHP.acessar_pagina_home()
 });
 
-When(`clico no botão de login`, () => {
-    Travels.clicar_botao_de_login()
+
+When(`acessar a pagina de login`, () => {
+    PHP.clicar_botao_de_login()
 
 });
 
-And(`preencho usuário invalido`, () => {
-    Travels.login_com_email_invalido('antonellaalana-83@met.org', 'E3EEAPEEO6')
+
+And(`inserir dados invalido`, () => {
+    PHP.login_com_dados_invalidos('antonellaalana@met.org', 'E3EEEEO6')
     
 });
 
-Then(`sera exibido uma mensagem de usuário invalido`, () => {
 
+Then(`deverá ser exibido uma mensagem usuário e senha invalida`, () => {
+	PHP.sera_exibido_senha_e_usuário_invalido()
 });
 
-// TERCEIRO CENÁRIO NEGATIVO - Realizar login com senha invalida
+
 Given(`dado que esteja na página home`, () => {
-    Travels.acessar_pagina_home()
+    PHP.acessar_pagina_home()
 });
 
 When(`clico no botão de login`, () => {
-    Travels.clicar_botao_de_login()
+    PHP.clicar_botao_de_login()
 
 });
 
 And(`preencho o campo de usuário menos a senha`, () => {
-    Travels.login_com_senha_invalida('antonellaalanadamota-83@met.org', 'kodsip')
+    PHP.login_com_senha_invalida('antonellaalanadamota-83@met.org', 'kodsip')
 
 });
 

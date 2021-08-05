@@ -14,7 +14,7 @@ export class Travels extends Base {
     }
 
     static preencher_todos_os_campos(valido) {
-        let dados_cadastro = Factory.cadastro(valido)
+        let dados_cadastro = Factory.dados(valido)
         console.log(dados_cadastro)
         super.typeValue(EL.PRIMEIRO_NOME, dados_cadastro.firstname)
         super.typeValue(EL.SEGUNDO_NOME, dados_cadastro.lastname)
@@ -28,6 +28,10 @@ export class Travels extends Base {
         cy.wait(1000)
         cy.get(EL.CADASTRO_COM_SUCESSO).should('not.be.empty')
 
+
+    }
+
+    static preencher_cadastro_com_dados_repetidos() {
        
     }
 
@@ -39,8 +43,8 @@ export class Travels extends Base {
         cy.get(EL.CONFIRMA_SENHA).type(confirmasenha)
         cy.get(EL.CONFIRMA_CADASTRO).click()
 
-
     }
+
     static validando_usuário_já_existente() {
         cy.get(EL.CADASTRO_EXISTENTE).should('contain', ' Email Already Exists.')
     }

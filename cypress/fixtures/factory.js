@@ -2,9 +2,10 @@ import faker, { fake } from 'faker'
 
 export class Factory {
 
-    static cadastro() {
+
+    static dados () {
         
-        
+            
                 return {
                     firstname: faker.name.firstName(),
                     lastname: faker.name.lastName(),
@@ -14,5 +15,9 @@ export class Factory {
                     password: faker.internet.password(),
 
                 }
-        }
-    }
+            }    
+        } 
+    
+    
+
+    
