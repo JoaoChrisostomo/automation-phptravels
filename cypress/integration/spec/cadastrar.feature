@@ -2,7 +2,7 @@ Feature: cadastrar usuário
 
     Background: Acesso a página home
         Given dado que esteja na página home
-
+        
     Scenario: Realizar cadastro com sucesso
         And seleciono a aba minha conta
         When preencher todos os campos de cadastro

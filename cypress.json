@@ -1,12 +1,9 @@
 {
-    "$schema": "https://on.cypress.io/cypress.schema.json",
     "video": false,
-    "viewportWidth": 1600,
-    "viewportHeight": 900,
+    "viewportWidth": 1520,
+    "viewportHeight": 880,
     "chromeWebSecurity": false,
-    "numTestKeptInMemory": 5,
+    "numTestsKeptInMemory": 1,
     "ignoreTestFiles": "*.js",
-    "testFiles": "**/*.{feature,features}",
-    "modifyObstructiveCode": false,
-    "experimentalSourceRewriting": true
+    "testFiles": ["**/*.feature"]
 }
