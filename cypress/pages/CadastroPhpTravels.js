@@ -35,21 +35,23 @@ export class Travels extends Base {
        
     }
 
-    static preencher_todos_os_campos_menos_email(nome, sobrenome, telefone, senha, confirmasenha) {
-        super.typeValue(EL.PRIMEIRO_NOME, nome)
-        cy.get(EL.SEGUNDO_NOME).type(sobrenome)
-        cy.get(EL.NUMERO_TELEFONE).type(telefone)
-        cy.get(EL.SENHA).type(senha)
-        cy.get(EL.CONFIRMA_SENHA).type(confirmasenha)
-        cy.get(EL.CONFIRMA_CADASTRO).click()
-
+    static preencher_todos_os_campos_menos_email(valido) {
+        let dados_cadastro = Factory.dados(valido)
+        console.log(dados_cadastro)
+        super.typeValue(EL.PRIMEIRO_NOME, dados_cadastro.firstname)
+        super.typeValue(EL.SEGUNDO_NOME, dados_cadastro.lastname)
+        super.typeValue(EL.NUMERO_TELEFONE, dados_cadastro.phoneNumber)
+        super.typeValue(EL.SENHA, dados_cadastro.password)
+        super.typeValue(EL.CONFIRMA_SENHA, dados_cadastro.password)
+        super.clickOnElement(EL.CONFIRMA_CADASTRO)
     }
 
     static validando_usuário_já_existente() {
         cy.get(EL.CADASTRO_EXISTENTE).should('contain', ' Email Already Exists.')
     }
-    static validando_a_url_logada() {
-        cy.url().should('eq', 'https://www.phptravels.net/register')
+    static validando_campo_sem_texto() {
+        cy.get(EL.EMAIL).should('have.value','')
+        
 
     }
 }

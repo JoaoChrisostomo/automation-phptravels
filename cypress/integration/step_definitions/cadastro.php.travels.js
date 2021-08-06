@@ -57,17 +57,13 @@ And(`seleciono a aba minha conta`, () => {
 
 
 When(`preencher todos os campos de cadastro menos email`, () => {
-    Travels.preencher_todos_os_campos_menos_email('geting',
-        'felix',
-        '11 985674965',
-        'E3EEAPEEO6',
-        'E3EEAPEEO6')
+    Travels.preencher_todos_os_campos_menos_email()
 
 });
 
 
 Then(`a mensagem de erro deverá ser exibida`, () => {
-	Travels.validando_a_url_logada()
+	Travels.validando_campo_sem_texto()
 });
 
 

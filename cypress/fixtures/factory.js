@@ -15,9 +15,7 @@ export class Factory {
                     password: faker.internet.password(),
 
                 }
+                case 'invalid:'
+                   return {
             }    
         } 
-    
-    
-
-    

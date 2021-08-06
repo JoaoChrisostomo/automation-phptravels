@@ -35,4 +35,10 @@ Cypress.Commands.add('clickAlert', (locator, message) => {
         expect(msg).to.be.equal('Alert Simples')
 
     })
+    Cypress.Commands.overwrite('type', (originalFn, subject, str, options) => {
+        if (str !== '') {
+        return originalFn(subject, str, options)
+        }
+        return subject
+        })
 })

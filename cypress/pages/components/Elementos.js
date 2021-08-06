@@ -12,6 +12,7 @@ export const ELEMENTS = {
     CONFIRMA_CADASTRO     : '#headersignupform > div:nth-child(8) > button',
     CADASTRO_COM_SUCESSO  : '.d-none > .dropdown > #dropdownCurrency',
     CADASTRO_EXISTENTE    : '.alert',
+   
 
  // ELEMENTOS - Login
 
